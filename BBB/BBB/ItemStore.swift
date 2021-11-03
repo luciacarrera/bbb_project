@@ -10,8 +10,10 @@ import UIKit
 
 class ItemStore {
     
+    // List of items stored
     var allItems = [Item]()
     
+    /* CREATE ITEM FUNCTION */
     @discardableResult func createItem() -> Item {
         let newItem = Item(random: true)
         
@@ -20,6 +22,7 @@ class ItemStore {
         return newItem
     }
     
+    /* INITIALIZER */
     init(){
         for _ in 0..<5 {
             createItem()

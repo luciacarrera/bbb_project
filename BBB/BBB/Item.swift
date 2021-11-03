@@ -10,15 +10,16 @@ import UIKit
 
 // clas with all things that will be included for each establishment
 class Item {
-
+    
+    /* ITEM PROPERTIES */
     // basic information
     var name: String
     var address: String
     var bestFor: String // category. may choose from list?
     var description: String
-    // var photo: UIImage //important
+    
+    // var photo: UIImage
     let dateCreated: Date // not included in draft but should add?
-
     
     // ratings, will need to make from min 0 to 5, so converts to stars
     var totalR: Int // average of all stars?
@@ -29,7 +30,7 @@ class Item {
     var friendlyR: Int
     let ratings = 5 // all ratings excluding totalR
 
-        
+    /* INITIALIZER */
     init(name: String, address: String, bestFor: String, description: String,  priceR: Int, drinksR: Int, musicR: Int, dancingR: Int, friendlyR: Int){
         //basic info
         self.name = name
@@ -51,6 +52,7 @@ class Item {
 
     }
     
+    /* CONVENIENCE INITIALIZER */
     convenience init(random: Bool = false) {
         if random {
             // name
