@@ -14,7 +14,6 @@
 		9EC8EAD92731E85D00B2F5F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC8EAD72731E85D00B2F5F1 /* LaunchScreen.storyboard */; };
 		9EC8EAE42731E85D00B2F5F1 /* BBBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8EAE32731E85D00B2F5F1 /* BBBTests.swift */; };
 		9EC8EAEF2731E85D00B2F5F1 /* BBBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8EAEE2731E85D00B2F5F1 /* BBBUITests.swift */; };
-		9EC8EAFD2731EBD900B2F5F1 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8EAFC2731EBD900B2F5F1 /* PhotoDataSource.swift */; };
 		9EC8EB012731EE2F00B2F5F1 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8EB002731EE2F00B2F5F1 /* ItemsViewController.swift */; };
 		9EC8EB032731F16C00B2F5F1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8EB022731F16C00B2F5F1 /* Item.swift */; };
 		9EC8EB052731F73200B2F5F1 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8EB042731F73200B2F5F1 /* ItemStore.swift */; };
@@ -51,7 +50,6 @@
 		9EC8EAEA2731E85D00B2F5F1 /* BBBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC8EAEE2731E85D00B2F5F1 /* BBBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBBUITests.swift; sourceTree = "<group>"; };
 		9EC8EAF02731E85D00B2F5F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9EC8EAFC2731EBD900B2F5F1 /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		9EC8EB002731EE2F00B2F5F1 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		9EC8EB022731F16C00B2F5F1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9EC8EB042731F73200B2F5F1 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 				9EC8EAD52731E85D00B2F5F1 /* Assets.xcassets */,
 				9EC8EAD72731E85D00B2F5F1 /* LaunchScreen.storyboard */,
 				9EC8EADA2731E85D00B2F5F1 /* Info.plist */,
-				9EC8EAFC2731EBD900B2F5F1 /* PhotoDataSource.swift */,
 			);
 			path = BBB;
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 				9EC8EB032731F16C00B2F5F1 /* Item.swift in Sources */,
 				9EC8EB012731EE2F00B2F5F1 /* ItemsViewController.swift in Sources */,
 				9EC8EB052731F73200B2F5F1 /* ItemStore.swift in Sources */,
-				9EC8EAFD2731EBD900B2F5F1 /* PhotoDataSource.swift in Sources */,
 				9EC8EACD2731E85C00B2F5F1 /* AppDelegate.swift in Sources */,
 				9EC8EACF2731E85C00B2F5F1 /* SceneDelegate.swift in Sources */,
 			);

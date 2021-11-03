@@ -16,7 +16,7 @@ class Item {
     var address: String
     var bestFor: String // category. may choose from list?
     var description: String
-    var photo: UIImage //important
+    // var photo: UIImage //important
     let dateCreated: Date // not included in draft but should add?
 
     
@@ -30,13 +30,13 @@ class Item {
     let ratings = 5 // all ratings excluding totalR
 
         
-    init(name: String, address: String, bestFor: String, description: String, photo:UIImage, totalR: Int, priceR: Int, drinksR: Int, musicR: Int, dancingR: Int, friendlyR: Int, dateCreated: Date){
+    init(name: String, address: String, bestFor: String, description: String,  priceR: Int, drinksR: Int, musicR: Int, dancingR: Int, friendlyR: Int){
         //basic info
         self.name = name
         self.address = address
         self.bestFor = bestFor
         self.description = description
-        self.photo = photo
+        //self.photo = photo removed because i didnt know how to do it
         self.dateCreated = Date()
         
         // ratings
@@ -48,18 +48,35 @@ class Item {
         
         // get average of ratings
         self.totalR = (priceR + drinksR + musicR + dancingR + friendlyR ) / ratings
-        
 
     }
     
     convenience init(random: Bool = false) {
         if random {
-            let places = ["Ake's","Lincoln's", "FOAM"]
-            let randomName = places.randomElement()!
-            let categories = ["Dancing","First Date","Watching Sports"]
+            // name
+            let places = ["Ake's Place","Three Needs", "FOAM Brewers"]
+            let randomIndex = Int.random(in: 0..<3)
+            let randomName = places[randomIndex]
             
+            // address
+            let addy = ["134 Church St, Burlington, VT 05401","185 Pearl St, Burlington, VT 05401", "12 Lake St, Burlington, VT 05401"]
+            let randomAddy = addy[randomIndex]
+            
+            // best for
+            let categories = ["Dancing","First Date","Watching Sports"]
+            let randomBestFor = categories.randomElement()!
+            
+            // description
+            let des = "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+            
+            // photo
+            //let photo = UIImage.init()
+            
+            self.init(name: randomName, address: randomAddy, bestFor: randomBestFor, description: des,  priceR: Int.random(in:0...5), drinksR: Int.random(in:0...5), musicR: Int.random(in:0...5), dancingR: Int.random(in:0...5), friendlyR: Int.random(in:0...5))
+            
+        }else{
+            self.init(name: "", address: "", bestFor: "", description: "", priceR: 0, drinksR: 0, musicR: 0, dancingR: 0, friendlyR: 0)
         }
-        <#statements#>
     }
     
 }
