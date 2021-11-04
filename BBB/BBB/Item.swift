@@ -14,6 +14,7 @@ class Item {
     /* ITEM PROPERTIES */
     // basic information
     var name: String
+    var type: String
     var address: String
     var bestFor: String // category. may choose from list?
     var description: String
@@ -31,9 +32,10 @@ class Item {
     let ratings = 5 // all ratings excluding totalR
 
     /* INITIALIZER */
-    init(name: String, address: String, bestFor: String, description: String,  priceR: Int, drinksR: Int, musicR: Int, dancingR: Int, friendlyR: Int){
+    init(name: String, type: String, address: String, bestFor: String, description: String,  priceR: Int, drinksR: Int, musicR: Int, dancingR: Int, friendlyR: Int){
         //basic info
         self.name = name
+        self.type = type
         self.address = address
         self.bestFor = bestFor
         self.description = description
@@ -55,17 +57,21 @@ class Item {
     /* CONVENIENCE INITIALIZER */
     convenience init(random: Bool = false) {
         if random {
-            // name
-            let places = ["Ake's Place","Three Needs", "FOAM Brewers"]
             let randomIndex = Int.random(in: 0..<3)
+
+            // name
+            let places = ["Ake's Place", "Three Needs", "FOAM Brewers"]
             let randomName = places[randomIndex]
             
+            // establishment type
+            let establishmentType = "Bar"
+            
             // address
-            let addy = ["134 Church St, Burlington, VT 05401","185 Pearl St, Burlington, VT 05401", "12 Lake St, Burlington, VT 05401"]
+            let addy = ["134 Church St. Burlington VT, 05401","185 Pearl St. Burlington VT, 05401", "12 Lake St. Burlington VT, 05401"]
             let randomAddy = addy[randomIndex]
             
             // best for
-            let categories = ["Dancing","First Date","Watching Sports"]
+            let categories = ["Dancing", "First Date", "Watching Sports"]
             let randomBestFor = categories.randomElement()!
             
             // description
@@ -74,10 +80,10 @@ class Item {
             // photo
             //let photo = UIImage.init()
             
-            self.init(name: randomName, address: randomAddy, bestFor: randomBestFor, description: des,  priceR: Int.random(in:0...5), drinksR: Int.random(in:0...5), musicR: Int.random(in:0...5), dancingR: Int.random(in:0...5), friendlyR: Int.random(in:0...5))
+            self.init(name: randomName, type: establishmentType, address: randomAddy, bestFor: randomBestFor, description: des,  priceR: Int.random(in:0...5), drinksR: Int.random(in:0...5), musicR: Int.random(in:0...5), dancingR: Int.random(in:0...5), friendlyR: Int.random(in:0...5))
             
-        }else{
-            self.init(name: "", address: "", bestFor: "", description: "", priceR: 0, drinksR: 0, musicR: 0, dancingR: 0, friendlyR: 0)
+        } else {
+            self.init(name: "", type: "", address: "", bestFor: "", description: "", priceR: 0, drinksR: 0, musicR: 0, dancingR: 0, friendlyR: 0)
         }
     }
     
