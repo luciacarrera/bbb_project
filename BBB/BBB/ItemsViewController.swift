@@ -18,7 +18,7 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // creates instance of uitableviewcell with default appearance
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "UITableViewCell")
         
         // sets text on cell with description of item
         // that is at the nth index of items where n= row
@@ -26,7 +26,7 @@ class ItemsViewController: UITableViewController {
         let item = itemStore.allItems[indexPath.row]
         
         cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = "\(item.totalR)"
+        cell.detailTextLabel?.text = "\(item.type)"
         
         return cell
     }
