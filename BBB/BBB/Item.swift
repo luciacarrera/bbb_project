@@ -9,7 +9,7 @@
 import UIKit
 
 // clas with all things that will be included for each establishment
-class Item {
+class Item: Equatable {
     
     /* ITEM PROPERTIES */
     // basic information
@@ -85,6 +85,12 @@ class Item {
         } else {
             self.init(name: "", type: "", address: "", bestFor: "", description: "", priceR: 0, drinksR: 0, musicR: 0, dancingR: 0, friendlyR: 0)
         }
+    }
+    
+    static func ==(lhs: Item, rhs: Item) -> Bool {
+        return lhs.name == rhs.name
+        && lhs.type == rhs.type
+        && lhs.address == rhs.address
     }
     
 }
