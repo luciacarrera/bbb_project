@@ -12,6 +12,13 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 65
+    }
+    
     @IBAction func addNewItem(_ sender: UIButton) {
         // Create a ne item and add it to the store
         let newItem = itemStore.createItem()
@@ -45,15 +52,16 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Get a new or recycle cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
         
         // sets text on cell with description of item
         // that is at the nth index of items where n= row
         // this cell will apeear in on the table view
         let item = itemStore.allItems[indexPath.row]
         
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = "\(item.type)"
+        cell.nameLabel.text = item.name
+        cell.typeLabel.text = item.type
+        cell.ratingLabel.text = "\(item.totalR)"
         
         return cell
     }

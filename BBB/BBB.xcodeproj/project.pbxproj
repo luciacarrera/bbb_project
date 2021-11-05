@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07BB6F712734D10E00307885 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB6F702734D10E00307885 /* ItemCell.swift */; };
 		9EC8EACD2731E85C00B2F5F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8EACC2731E85C00B2F5F1 /* AppDelegate.swift */; };
 		9EC8EACF2731E85C00B2F5F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8EACE2731E85C00B2F5F1 /* SceneDelegate.swift */; };
 		9EC8EAD42731E85C00B2F5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC8EAD22731E85C00B2F5F1 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07BB6F702734D10E00307885 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		9EC8EAC92731E85C00B2F5F1 /* BBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC8EACC2731E85C00B2F5F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EC8EACE2731E85C00B2F5F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				9EC8EACE2731E85C00B2F5F1 /* SceneDelegate.swift */,
 				9EC8EAD22731E85C00B2F5F1 /* Main.storyboard */,
 				9EC8EB002731EE2F00B2F5F1 /* ItemsViewController.swift */,
+				07BB6F702734D10E00307885 /* ItemCell.swift */,
 				9EC8EB042731F73200B2F5F1 /* ItemStore.swift */,
 				9EC8EB022731F16C00B2F5F1 /* Item.swift */,
 				9EC8EAD52731E85D00B2F5F1 /* Assets.xcassets */,
@@ -267,6 +270,7 @@
 			files = (
 				9EC8EB032731F16C00B2F5F1 /* Item.swift in Sources */,
 				9EC8EB012731EE2F00B2F5F1 /* ItemsViewController.swift in Sources */,
+				07BB6F712734D10E00307885 /* ItemCell.swift in Sources */,
 				9EC8EB052731F73200B2F5F1 /* ItemStore.swift in Sources */,
 				9EC8EACD2731E85C00B2F5F1 /* AppDelegate.swift in Sources */,
 				9EC8EACF2731E85C00B2F5F1 /* SceneDelegate.swift in Sources */,
