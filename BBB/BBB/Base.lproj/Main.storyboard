@@ -87,7 +87,7 @@
                                     <outlet property="nameLabel" destination="VFD-fU-7ta" id="7Ci-Xs-hQJ"/>
                                     <outlet property="ratingLabel" destination="cht-G3-W9E" id="t78-J9-HT1"/>
                                     <outlet property="typeLabel" destination="sbS-uA-kJY" id="0OE-DN-uvm"/>
-                                    <segue destination="4AL-mW-aI1" kind="show" id="pAh-99-zMB"/>
+                                    <segue destination="4AL-mW-aI1" kind="show" identifier="showItem" id="pAh-99-zMB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

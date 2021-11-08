@@ -22,6 +22,9 @@ class DetailViewController: UIViewController{
     
     var item: Item!
     
+    // Use address/slider formatters?
+    // put categories in best for?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
