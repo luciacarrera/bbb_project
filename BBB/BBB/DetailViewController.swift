@@ -13,7 +13,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet var nameField: UILabel!
     @IBOutlet var addressField: UITextField!
-    @IBOutlet var descriptionField: UITextField!
+    @IBOutlet var descriptionField: UITextView!
     @IBOutlet var bestField: UITextField!
     @IBOutlet var priceField: UISlider!
     @IBOutlet var drinksField: UISlider!
@@ -25,13 +25,31 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         view.endEditing(true)
     }
     
+    @IBAction func choosePhotoSource(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+    }
     
     var item: Item! {
         didSet {
             navigationItem.title = item.name
         }
     }
+    @IBAction func deleteItem(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
+            print("Present camera")
+        }
+        alertController.addAction(cameraAction)
         
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default){_ in
+            print("Present photo library")
+        }
+        alertController.addAction(photoLibraryAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+    }
+    
     
     // Use address/slider formatters?
     // put categories in best for?
@@ -71,5 +89,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         return true
     }
     
+    override func viewDidLoad() {
+        var borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
+        descriptionField.layer.borderWidth = 1.5
+        descriptionField.layer.borderColor = borderColor.cgColor
+        descriptionField.layer.cornerRadius = 5.0
+    }
     
 }
