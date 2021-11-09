@@ -9,7 +9,7 @@
 import UIKit
 
 // clas with all things that will be included for each establishment
-class Item: Equatable {
+class Item: Equatable, Codable {
     
     /* ITEM PROPERTIES */
     // basic information

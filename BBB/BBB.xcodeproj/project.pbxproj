@@ -459,7 +459,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "lucia-jade.BBB";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BBB;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -476,7 +476,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "lucia-jade.BBB";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BBB;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -44,6 +44,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="sbS-uA-kJY" secondAttribute="bottom" constant="5" id="44W-PT-dHe"/>
+                                        <constraint firstAttribute="trailing" secondItem="cht-G3-W9E" secondAttribute="trailing" constant="8" id="AvW-8u-EYU"/>
                                         <constraint firstItem="VFD-fU-7ta" firstAttribute="top" secondItem="Crc-jH-DE6" secondAttribute="topMargin" id="RG1-Rg-SHu"/>
                                         <constraint firstItem="VFD-fU-7ta" firstAttribute="leading" secondItem="Crc-jH-DE6" secondAttribute="leadingMargin" id="W8N-Zp-8b8"/>
                                         <constraint firstItem="sbS-uA-kJY" firstAttribute="top" secondItem="VFD-fU-7ta" secondAttribute="bottom" constant="11" id="Wv1-hI-kKC"/>
