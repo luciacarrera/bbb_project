@@ -27,15 +27,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func choosePhotoSource(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-    }
-    
-    var item: Item! {
-        didSet {
-            navigationItem.title = item.name
-        }
-    }
-    @IBAction func deleteItem(_ sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
             print("Present camera")
         }
@@ -48,7 +39,32 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
+    @IBAction func deleteItem(_ sender: UIBarButtonItem) {
+        
+        let itemToDelete = nameField.text ?? ""
+        
+        let alertController = UIAlertController(title: nil, message: "Are you sure you want to delete \(itemToDelete)?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Yes", style: .destructive){
+            (action) in
+        }
+        alertController.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true) // completion: nil?
+        
+           
+    }
+    var item: Item! {
+        didSet {
+            navigationItem.title = item.name
+        }
+    }
+   
     
     
     // Use address/slider formatters?
@@ -90,7 +106,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     }
     
     override func viewDidLoad() {
-        var borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
+        let borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
         descriptionField.layer.borderWidth = 1.5
         descriptionField.layer.borderColor = borderColor.cgColor
         descriptionField.layer.cornerRadius = 5.0
