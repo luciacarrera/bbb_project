@@ -20,6 +20,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var dancingField: UISlider!
     @IBOutlet var friendlinessField: UISlider!
     
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     
     
     var item: Item!

@@ -258,6 +258,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="rrQ-AM-HgW" firstAttribute="leading" secondItem="T6q-J5-cZx" secondAttribute="leading" id="A2t-x4-ydX"/>
                                     <constraint firstItem="N0M-BA-tpN" firstAttribute="leading" secondItem="4j7-oP-jRJ" secondAttribute="leading" id="JqG-AU-QCp"/>
@@ -277,6 +278,9 @@
                             <constraint firstItem="8sz-0k-fem" firstAttribute="trailing" secondItem="7zT-eH-QEV" secondAttribute="trailing" constant="-20" id="xMH-ns-65o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7zT-eH-QEV"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SQq-8B-bBQ" appends="YES" id="bwQ-OR-XVz"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="rq3-yq-i5P"/>
                     <connections>
@@ -292,6 +296,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGE-9f-I7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SQq-8B-bBQ">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="dE8-QR-6kH" id="KlQ-jO-UTC"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3579.7101449275365" y="89.732142857142847"/>
         </scene>
