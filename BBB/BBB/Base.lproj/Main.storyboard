@@ -15,35 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="bQW-uY-fDH">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xr-wU-bMw">
-                                    <rect key="frame" x="369" y="12" width="25" height="24"/>
-                                    <state key="normal" image="pencil.circle" catalog="system"/>
-                                    <connections>
-                                        <action selector="toggleEditingMode:" destination="Ima-J1-UEG" eventType="touchUpInside" id="zJS-mD-m9g"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYx-WA-ma4">
-                                    <rect key="frame" x="369" y="54" width="25" height="24"/>
-                                    <connections>
-                                        <action selector="addNewItem:" destination="Ima-J1-UEG" eventType="touchUpInside" id="BJC-nb-5OT"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="3Xr-wU-bMw" secondAttribute="trailing" constant="20" id="A66-z3-k6I"/>
-                                <constraint firstAttribute="trailing" secondItem="hYx-WA-ma4" secondAttribute="trailing" constant="20" id="MJU-mI-Y7z"/>
-                                <constraint firstItem="3Xr-wU-bMw" firstAttribute="top" secondItem="bQW-uY-fDH" secondAttribute="top" constant="12" id="Xbh-ZF-uVa"/>
-                                <constraint firstAttribute="bottom" secondItem="hYx-WA-ma4" secondAttribute="bottom" constant="12" id="xGC-mk-AZD"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="ZGh-YZ-Et9" customClass="ItemCell" customModule="BBB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="118" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZGh-YZ-Et9" id="Crc-jH-DE6">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
@@ -94,7 +68,13 @@
                             <outlet property="delegate" destination="Ima-J1-UEG" id="yts-Kd-ALN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="YpI-dI-gNl"/>
+                    <navigationItem key="navigationItem" title="Bars &amp; Breweries of Burlington" id="YpI-dI-gNl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EEl-QC-ut0">
+                            <connections>
+                                <action selector="addNewItem:" destination="Ima-J1-UEG" id="Nla-t5-jDY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UT-9k-8dR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,7 +303,4 @@
             <point key="canvasLocation" x="1718.840579710145" y="90.401785714285708"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="pencil.circle" catalog="system" width="64" height="60"/>
-    </resources>
 </document>

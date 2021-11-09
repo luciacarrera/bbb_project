@@ -25,7 +25,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     }
     
     
-    var item: Item!
+    var item: Item! {
+        didSet {
+            navigationItem.title = item.name
+        }
+    }
     
     // Use address/slider formatters?
     // put categories in best for?
