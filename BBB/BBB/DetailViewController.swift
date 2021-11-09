@@ -48,7 +48,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         
         let alertController = UIAlertController(title: nil, message: "Are you sure you want to delete \(itemToDelete)?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Yes", style: .destructive){
-            (action) in
+            (action) in // ItemStore.removeItem
         }
         alertController.addAction(okAction)
         

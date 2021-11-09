@@ -33,19 +33,7 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        if isEditing {
-            // Change text of button to inform user of state
-            sender.setImage(UIImage(systemName: "pencil.circle"), for: .normal)
-            
-            // Turn off editing mode
-            setEditing(false, animated: true)
-        } else {
-            sender.setImage(UIImage(systemName: "x.circle"), for: .normal)
-            
-            setEditing(true, animated: true)
-        }
-    }
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.allItems.count
