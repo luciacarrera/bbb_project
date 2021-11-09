@@ -30,7 +30,8 @@ class Item: Equatable, Codable {
     var dancingR: Float
     var friendlyR: Float
     let ratings = 5.0 // all ratings excluding totalR
-
+    
+    
     /* INITIALIZER */
     init(name: String, type: String, address: String, bestFor: String, description: String,  priceR: Float, drinksR: Float, musicR: Float, dancingR: Float, friendlyR: Float){
         //basic info

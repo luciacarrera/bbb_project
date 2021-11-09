@@ -9,7 +9,8 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate{
-        
+    
+    
     @IBOutlet var nameField: UILabel!
     @IBOutlet var addressField: UITextField!
     @IBOutlet var descriptionField: UITextField!
@@ -30,6 +31,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
             navigationItem.title = item.name
         }
     }
+        
     
     // Use address/slider formatters?
     // put categories in best for?

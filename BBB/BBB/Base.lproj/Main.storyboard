@@ -272,7 +272,7 @@
                         <outlet property="drinksField" destination="rrQ-AM-HgW" id="H3g-zk-Vnz"/>
                         <outlet property="friendlinessField" destination="3rn-xG-viJ" id="bet-HO-dlL"/>
                         <outlet property="musicField" destination="T6q-J5-cZx" id="0ce-Dk-orb"/>
-                        <outlet property="nameField" destination="4Ce-N5-9hc" id="Ng3-f3-jlx"/>
+                        <outlet property="nameField" destination="BKa-jg-c4C" id="4tW-vi-2Ij"/>
                         <outlet property="priceField" destination="iEz-Zh-8vC" id="WQP-QQ-9ue"/>
                     </connections>
                 </viewController>
