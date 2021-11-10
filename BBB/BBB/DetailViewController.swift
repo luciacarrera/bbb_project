@@ -13,8 +13,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet var nameField: UITextField!
     @IBOutlet var addressField: UITextField!
-    @IBOutlet var descriptionField: UITextView!
     @IBOutlet var bestField: UITextField!
+    @IBOutlet var descriptionField: UITextView!
     @IBOutlet var priceField: UISlider!
     @IBOutlet var drinksField: UISlider!
     @IBOutlet var musicField: UISlider!
@@ -47,6 +47,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         let itemToDelete = nameField.text ?? ""
         
         let alertController = UIAlertController(title: nil, message: "Are you sure you want to delete \(itemToDelete)?", preferredStyle: .alert)
+        
         let okAction = UIAlertAction(title: "Yes", style: .destructive){
             (action) in // ItemStore.removeItem
         }
