@@ -24,16 +24,14 @@ class Item: Equatable, Codable {
     
     // ratings, will need to make from min 0 to 5, so converts to stars
     var totalR: Double // average of all stars?
-    var priceR: Int
-    var drinksR: Int
-    var musicR: Int
-    var dancingR: Int
-    var friendlyR: Int
-    let ratings = 5 // all ratings excluding totalR
-    
+    var priceR: Float
+    var drinksR: Float
+    var musicR: Float
+    var dancingR: Float
+    var friendlyR: Float
     
     /* INITIALIZER */
-    init(name: String, type: String, address: String, bestFor: String, description: String,  priceR: Int, drinksR: Int, musicR: Int, dancingR: Int, friendlyR: Int){
+    init(name: String, type: String, address: String, bestFor: String, description: String,  priceR: Float, drinksR: Float, musicR: Float, dancingR: Float, friendlyR: Float){
         //basic info
         self.name = name
         self.type = type
@@ -51,7 +49,7 @@ class Item: Equatable, Codable {
         self.friendlyR = friendlyR
         
         // get average of ratings
-        self.totalR = (priceR + drinksR + musicR + dancingR + friendlyR ) / ratings
+        self.totalR = (priceR + drinksR + musicR + dancingR + friendlyR ) / 5.0
 
     }
     
@@ -86,11 +84,11 @@ class Item: Equatable, Codable {
                       address: randomAddy,
                       bestFor: randomBestFor,
                       description: des,
-                      priceR: Int.random(in:0...5),
-                      drinksR: Int.random(in:0...5),
-                      musicR: Int.random(in:0...5),
-                      dancingR: Int.random(in:0...5),
-                      friendlyR: Int.random(in:0...5))
+                      priceR: Float.random(in:0...5),
+                      drinksR: Float.random(in:0...5),
+                      musicR: Float.random(in:0...5),
+                      dancingR: Float.random(in:0...5),
+                      friendlyR: Float.random(in:0...5))
             
         } else {
             self.init(name: "", type: "", address: "", bestFor: "", description: "", priceR: 0, drinksR: 0, musicR: 0, dancingR: 0, friendlyR: 0)
