@@ -23,7 +23,7 @@ class Item: Equatable, Codable {
     let dateCreated: Date // not included in draft but should add?
     
     // ratings, will need to make from min 0 to 5, so converts to stars
-    var totalR: Float // average of all stars?
+    var totalR: String // average of all stars?
     var priceR: Float
     var drinksR: Float
     var musicR: Float
@@ -51,7 +51,8 @@ class Item: Equatable, Codable {
         self.friendlyR = friendlyR
         
         // get average of ratings
-        self.totalR = (priceR + drinksR + musicR + dancingR + friendlyR ) / Float(ratings)
+        let total = (priceR + drinksR + musicR + dancingR + friendlyR ) / Float(ratings)
+        self.totalR = String(round(total * 100) / 100.0)
 
     }
     

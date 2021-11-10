@@ -48,14 +48,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         let itemToDelete = nameField.text ?? ""
         
         let alertController = UIAlertController(title: nil, message: "Are you sure you want to delete \(itemToDelete)?", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Yes", style: .destructive){
-            _ in
+        let okAction = UIAlertAction(title: "Yes", style: .destructive){_ in
             // erase item
             self.itemStore.removeItem(self.item)
             // go back to main view
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ItemsViewController") 
-            self.present(vc, animated: true, completion: nil)
+            self.navigationController!.popViewController(animated: true)
+            //let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            //let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ItemsViewController")
+            //self.present(vc, animated: true, completion: nil)
             
             
             
