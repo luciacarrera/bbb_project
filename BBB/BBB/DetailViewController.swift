@@ -20,6 +20,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var musicField: UISlider!
     @IBOutlet var dancingField: UISlider!
     @IBOutlet var friendlinessField: UISlider!
+    var itemStore: ItemStore!
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -48,7 +49,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         
         let alertController = UIAlertController(title: nil, message: "Are you sure you want to delete \(itemToDelete)?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Yes", style: .destructive){
-            (action) in // ItemStore.removeItem
+            _ in
+            // erase item
+            self.itemStore.removeItem(self.item)
+            // go back to main view
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ItemsViewController") 
+            self.present(vc, animated: true, completion: nil)
+            
+            
+            
         }
         alertController.addAction(okAction)
         
