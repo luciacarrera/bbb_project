@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate{
     
+
     
     @IBOutlet var nameField: UITextField!
     @IBOutlet var addressField: UITextField!
@@ -20,7 +21,25 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var dancingField: UISlider!
     @IBOutlet var friendlinessField: UISlider!
     
+    @IBOutlet var rating: UILabel!
+    
     @IBOutlet var starButtons: [UIButton]!
+    
+    @IBAction func priceStarTapped(_ sender: UIButton) {
+        let tag = sender.tag
+        for button in starButtons {
+            if button.tag <= tag {
+                // select button
+                button.setTitle("★", for: .normal)
+            } else {
+                // not selected button
+                button.setTitle("☆", for: .normal)
+            }
+        }
+        rating.text = String(tag)
+//        item.priceR = Float(tag)
+    }
+    
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -57,19 +76,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
         
-        present(alertController, animated: true) // completion: nil?
-        
-           
-    }
-    
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        for button in starButtons {
-            if button.tag <= sender.tag {
-                button.setBackgroundImage(UIImage.init(systemName: "star.fill"), for: .normal)
-            } else {
-                button.setBackgroundImage(UIImage.init(systemName: "star"), for: .normal)
-            }
-        }
+        present(alertController, animated: true) // completion: nil
     }
     
     var item: Item! {
@@ -77,8 +84,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
             navigationItem.title = item.name
         }
     }
-   
-    
     
     // Use address/slider formatters?
     // put categories in best for?
@@ -89,6 +94,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         nameField.text = item.name
         addressField.text = item.address
         bestField.text = item.bestFor
+        rating.text = String(item.priceR)
 //        priceField.value = Float(item.priceR)
         drinksField.value = Float(item.drinksR)
         musicField.value = Float(item.musicR)
@@ -100,15 +106,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     override func viewWillDisappear(_ animated: Bool){
         super.viewWillDisappear(animated)
         
-        
         // "Save" changes to item
         item.name = nameField.text ?? ""
         item.address = addressField.text ?? ""
         item.bestFor = bestField.text ?? ""
-//        item.priceR = priceField.value
-        item.drinksR = drinksField.value
-        item.dancingR = dancingField.value
-        item.friendlyR = friendlinessField.value
+//        item.priceR = Int(rating.text ?? "") ?? 0
+//        item.drinksR = Int(drinksField.value)
+//        item.dancingR = Int(dancingField.value)
+//        item.friendlyR = Int(friendlinessField.value)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -116,7 +121,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         return true
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
     
 }
