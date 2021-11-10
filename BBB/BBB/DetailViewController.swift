@@ -15,7 +15,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var nameField: UITextField!
     @IBOutlet var addressField: UITextField!
     @IBOutlet var bestField: UITextField!
-//    @IBOutlet var priceField: UISlider!
+
     @IBOutlet var drinksField: UISlider!
     @IBOutlet var musicField: UISlider!
     @IBOutlet var dancingField: UISlider!
@@ -36,10 +36,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
                 button.setTitle("☆", for: .normal)
             }
         }
+        
         rating.text = String(tag)
-//        item.priceR = Float(tag)
     }
-    
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -95,6 +94,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         addressField.text = item.address
         bestField.text = item.bestFor
         rating.text = String(item.priceR)
+        
+        for i in 0..<Int(item.priceR) {
+            starButtons[i].setTitle("★", for: .normal)
+        }
+        
 //        priceField.value = Float(item.priceR)
         drinksField.value = Float(item.drinksR)
         musicField.value = Float(item.musicR)
@@ -110,7 +114,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         item.name = nameField.text ?? ""
         item.address = addressField.text ?? ""
         item.bestFor = bestField.text ?? ""
-//        item.priceR = Int(rating.text ?? "") ?? 0
+        item.priceR = Double(rating.text ?? "") ?? 0.0
 //        item.drinksR = Int(drinksField.value)
 //        item.dancingR = Int(dancingField.value)
 //        item.friendlyR = Int(friendlinessField.value)

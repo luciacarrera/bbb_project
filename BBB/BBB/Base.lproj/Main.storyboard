@@ -234,7 +234,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-YH-gn7">
                                                                 <rect key="frame" x="235" y="0.0" width="145" height="42"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-L7-G9e">
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-L7-G9e">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="42"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="25" id="Vam-fG-boQ"/>
@@ -248,7 +248,7 @@
                                                                             <action selector="priceStarTapped:" destination="dE8-QR-6kH" eventType="touchUpInside" id="wDq-8Z-hHy"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfA-WS-ywX">
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfA-WS-ywX">
                                                                         <rect key="frame" x="30" y="0.0" width="25" height="42"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="25" id="z5M-xD-zZf"/>
@@ -262,7 +262,7 @@
                                                                             <action selector="priceStarTapped:" destination="dE8-QR-6kH" eventType="touchUpInside" id="xjH-9O-C9K"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBc-lR-MKs">
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBc-lR-MKs">
                                                                         <rect key="frame" x="60" y="0.0" width="25" height="42"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="25" id="UqB-2H-My1"/>
@@ -276,7 +276,7 @@
                                                                             <action selector="priceStarTapped:" destination="dE8-QR-6kH" eventType="touchUpInside" id="XZo-k3-Fjh"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt9-hv-qlr">
+                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt9-hv-qlr">
                                                                         <rect key="frame" x="90" y="0.0" width="25" height="42"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="25" id="DrD-fr-bTB"/>
@@ -291,7 +291,7 @@
                                                                             <action selector="priceStarTapped:" destination="dE8-QR-6kH" eventType="touchUpInside" id="Gnf-pV-5LD"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nG-A8-wTw">
+                                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nG-A8-wTw">
                                                                         <rect key="frame" x="120" y="0.0" width="25" height="42"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="25" id="yar-rD-inV"/>

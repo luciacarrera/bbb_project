@@ -48,8 +48,12 @@ class ItemsViewController: UITableViewController {
         // this cell will apeear in on the table view
         let item = itemStore.allItems[indexPath.row]
         
+        
+        
         cell.nameLabel.text = item.name
         cell.typeLabel.text = item.type
+        
+        item.totalR = (item.priceR + item.drinksR + item.musicR + item.dancingR + item.friendlyR ) / 5.0
         cell.ratingLabel.text = "\(item.totalR)"
         
         return cell

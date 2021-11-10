@@ -24,14 +24,13 @@ class Item: Equatable, Codable {
     
     // ratings, will need to make from min 0 to 5, so converts to stars
     var totalR: Double // average of all stars?
-    var priceR: Float
-    var drinksR: Float
-    var musicR: Float
-    var dancingR: Float
-    var friendlyR: Float
-    
+    var priceR: Double
+    var drinksR: Double
+    var musicR: Double
+    var dancingR: Double
+    var friendlyR: Double
     /* INITIALIZER */
-    init(name: String, type: String, address: String, bestFor: String, description: String,  priceR: Float, drinksR: Float, musicR: Float, dancingR: Float, friendlyR: Float){
+    init(name: String, type: String, address: String, bestFor: String, description: String,  priceR: Double, drinksR: Double, musicR: Double, dancingR: Double, friendlyR: Double){
         //basic info
         self.name = name
         self.type = type
@@ -49,7 +48,7 @@ class Item: Equatable, Codable {
         self.friendlyR = friendlyR
         
         // get average of ratings
-        self.totalR = (priceR + drinksR + musicR + dancingR + friendlyR ) / Float(5.0)
+        self.totalR = (priceR + drinksR + musicR + dancingR + friendlyR ) / 5.0
 
     }
     
@@ -84,11 +83,11 @@ class Item: Equatable, Codable {
                       address: randomAddy,
                       bestFor: randomBestFor,
                       description: des,
-                      priceR: Float.random(in:0...5),
-                      drinksR: Float.random(in:0...5),
-                      musicR: Float.random(in:0...5),
-                      dancingR: Float.random(in:0...5),
-                      friendlyR: Float.random(in:0...5))
+                      priceR: 0,
+                      drinksR: 0,
+                      musicR: 0,
+                      dancingR: 0,
+                      friendlyR: 0)
             
         } else {
             self.init(name: "", type: "", address: "", bestFor: "", description: "", priceR: 0, drinksR: 0, musicR: 0, dancingR: 0, friendlyR: 0)
