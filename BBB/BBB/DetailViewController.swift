@@ -14,7 +14,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var nameField: UITextField!
     @IBOutlet var addressField: UITextField!
     @IBOutlet var bestField: UITextField!
-    @IBOutlet var descriptionField: UITextView!
 //    @IBOutlet var priceField: UISlider!
     @IBOutlet var drinksField: UISlider!
     @IBOutlet var musicField: UISlider!
@@ -89,7 +88,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         
         nameField.text = item.name
         addressField.text = item.address
-        descriptionField.text = item.description
         bestField.text = item.bestFor
 //        priceField.value = Float(item.priceR)
         drinksField.value = Float(item.drinksR)
@@ -106,7 +104,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         // "Save" changes to item
         item.name = nameField.text ?? ""
         item.address = addressField.text ?? ""
-        item.description = descriptionField.text ?? ""
         item.bestFor = bestField.text ?? ""
 //        item.priceR = priceField.value
         item.drinksR = drinksField.value
@@ -119,12 +116,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         return true
     }
     
-    override func viewDidLoad() {
-        let borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
-        descriptionField.layer.borderWidth = 1.5
-        descriptionField.layer.borderColor = borderColor.cgColor
-        descriptionField.layer.cornerRadius = 5.0
-    }
     
     
     
