@@ -21,13 +21,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var dancingField: UISlider!
     @IBOutlet var friendlinessField: UISlider!
     
-    @IBOutlet var rating: UILabel!
+    @IBOutlet var priceRating: UILabel!
+    @IBOutlet var priceStarButtons: [UIButton]!
     
-    @IBOutlet var starButtons: [UIButton]!
+    var itemStore: ItemStore!
     
     @IBAction func priceStarTapped(_ sender: UIButton) {
         let tag = sender.tag
-        for button in starButtons {
+        for button in priceStarButtons {
             if button.tag <= tag {
                 // select button
                 button.setTitle("★", for: .normal)
@@ -37,7 +38,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
             }
         }
         
-        rating.text = String(tag)
+        priceRating.text = String(tag)
     }
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
@@ -67,8 +68,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         
         let alertController = UIAlertController(title: nil, message: "Are you sure you want to delete \(itemToDelete)?", preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Yes", style: .destructive){
-            (action) in // ItemStore.removeItem
+        let okAction = UIAlertAction(title: "Yes", style: .destructive){_ in
+            // erase item
+            self.itemStore.removeItem(self.item)
+            // go back to main view
+            self.navigationController!.popViewController(animated: true)
         }
         alertController.addAction(okAction)
         
@@ -93,10 +97,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         nameField.text = item.name
         addressField.text = item.address
         bestField.text = item.bestFor
-        rating.text = String(item.priceR)
+        priceRating.text = String(item.priceR)
         
         for i in 0..<Int(item.priceR) {
-            starButtons[i].setTitle("★", for: .normal)
+            priceStarButtons[i].setTitle("★", for: .normal)
         }
         
 //        priceField.value = Float(item.priceR)
@@ -114,7 +118,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         item.name = nameField.text ?? ""
         item.address = addressField.text ?? ""
         item.bestFor = bestField.text ?? ""
-        item.priceR = Double(rating.text ?? "") ?? 0.0
+        item.priceR = Double(priceRating.text ?? "") ?? 0.0
 //        item.drinksR = Int(drinksField.value)
 //        item.dancingR = Int(dancingField.value)
 //        item.friendlyR = Int(friendlinessField.value)

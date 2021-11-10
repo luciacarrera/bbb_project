@@ -222,14 +222,13 @@
                                                                 <rect key="frame" x="97.666666666666686" y="0.0" width="120.33333333333331" height="42"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8N-2Y-TVD">
-                                                                        <rect key="frame" x="11" y="8" width="101" height="26"/>
+                                                                        <rect key="frame" x="84" y="8" width="28" height="26"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             </view>
                                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-YH-gn7">
                                                                 <rect key="frame" x="235" y="0.0" width="145" height="42"/>
@@ -310,46 +309,46 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aTc-3S-Cam">
-                                                        <rect key="frame" x="0.0" y="245.66666666666669" width="380" height="30"/>
+                                                        <rect key="frame" x="0.0" y="245.66666666666666" width="380" height="49.666666666666657"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" ambiguous="YES" image="cocktail-emoji" translatesAutoresizingMaskIntoConstraints="NO" id="OLb-6J-e8e">
-                                                                <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="25" height="49.666666666666664"/>
                                                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="FU8-m1-Fxu" userLabel="width = 22"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFf-jX-fS1">
-                                                                <rect key="frame" x="45" y="0.0" width="170" height="30"/>
+                                                                <rect key="frame" x="45" y="0.0" width="170" height="49.666666666666664"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rrQ-AM-HgW">
-                                                                <rect key="frame" x="233" y="0.0" width="149" height="31"/>
+                                                                <rect key="frame" x="233" y="0.0" width="149" height="50.666666666666664"/>
                                                             </slider>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Cxr-Si-LIP">
-                                                        <rect key="frame" x="0.0" y="303.66666666666669" width="380" height="30"/>
+                                                        <rect key="frame" x="0.0" y="323.33333333333331" width="380" height="20.333333333333314"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dancing-emoji" translatesAutoresizingMaskIntoConstraints="NO" id="bVM-jd-qWN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.quarternote.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bVM-jd-qWN">
+                                                                <rect key="frame" x="0.0" y="0.99999999999999822" width="25" height="18.666666666666664"/>
                                                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-OA-Bzx">
-                                                                <rect key="frame" x="45" y="0.0" width="170" height="30"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-OA-Bzx">
+                                                                <rect key="frame" x="45" y="0.0" width="170" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-J5-cZx">
-                                                                <rect key="frame" x="233" y="0.0" width="149" height="31"/>
+                                                            <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-J5-cZx">
+                                                                <rect key="frame" x="233" y="0.0" width="149" height="21.333333333333332"/>
                                                             </slider>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1zt-mM-L9E">
-                                                        <rect key="frame" x="0.0" y="361.66666666666663" width="380" height="30"/>
+                                                        <rect key="frame" x="0.0" y="371.66666666666663" width="380" height="30"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dancing-emoji" translatesAutoresizingMaskIntoConstraints="NO" id="wg7-6e-hKv">
                                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
@@ -370,20 +369,20 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ho9-YY-Mto">
-                                                        <rect key="frame" x="0.0" y="419.66666666666663" width="380" height="30.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="429.66666666666663" width="380" height="20.333333333333314"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xyn-CQ-zJ8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="25" height="30.333333333333332"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xyn-CQ-zJ8">
+                                                                <rect key="frame" x="0.0" y="0.99999999999999822" width="25" height="19"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friendliness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbs-jU-48R">
-                                                                <rect key="frame" x="45" y="0.0" width="170" height="30.333333333333332"/>
+                                                                <rect key="frame" x="45" y="0.0" width="170" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3rn-xG-viJ">
-                                                                <rect key="frame" x="233" y="0.0" width="149" height="31.333333333333332"/>
+                                                                <rect key="frame" x="233" y="0.0" width="149" height="21.333333333333332"/>
                                                             </slider>
                                                         </subviews>
                                                     </stackView>
@@ -433,7 +432,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="rq3-yq-i5P"/>
                     <connections>
-                        <outlet property="Rating" destination="W8N-2Y-TVD" id="rYG-Lm-edI"/>
                         <outlet property="addressField" destination="N0M-BA-tpN" id="sMd-GX-ktQ"/>
                         <outlet property="bestField" destination="4j7-oP-jRJ" id="b9z-lx-FJq"/>
                         <outlet property="dancingField" destination="Yz5-vG-gwg" id="hAH-xv-aLb"/>
@@ -441,11 +439,12 @@
                         <outlet property="friendlinessField" destination="3rn-xG-viJ" id="bet-HO-dlL"/>
                         <outlet property="musicField" destination="T6q-J5-cZx" id="0ce-Dk-orb"/>
                         <outlet property="nameField" destination="mpb-qQ-HXh" id="Kdl-1J-Rbf"/>
-                        <outletCollection property="starButtons" destination="c5c-L7-G9e" collectionClass="NSMutableArray" id="mG2-d6-Paq"/>
-                        <outletCollection property="starButtons" destination="VfA-WS-ywX" collectionClass="NSMutableArray" id="fdL-EQ-SJ4"/>
-                        <outletCollection property="starButtons" destination="XBc-lR-MKs" collectionClass="NSMutableArray" id="ahl-hK-5So"/>
-                        <outletCollection property="starButtons" destination="qt9-hv-qlr" collectionClass="NSMutableArray" id="9dq-4V-Yjk"/>
-                        <outletCollection property="starButtons" destination="0nG-A8-wTw" collectionClass="NSMutableArray" id="VEN-ee-mUb"/>
+                        <outlet property="priceRating" destination="W8N-2Y-TVD" id="UDg-bN-5Jf"/>
+                        <outletCollection property="priceStarButtons" destination="c5c-L7-G9e" collectionClass="NSMutableArray" id="Xss-R5-jXp"/>
+                        <outletCollection property="priceStarButtons" destination="VfA-WS-ywX" collectionClass="NSMutableArray" id="WIW-ae-ayh"/>
+                        <outletCollection property="priceStarButtons" destination="XBc-lR-MKs" collectionClass="NSMutableArray" id="V0I-dB-ajx"/>
+                        <outletCollection property="priceStarButtons" destination="qt9-hv-qlr" collectionClass="NSMutableArray" id="tqy-Lm-olX"/>
+                        <outletCollection property="priceStarButtons" destination="0nG-A8-wTw" collectionClass="NSMutableArray" id="tPh-lf-TKP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGE-9f-I7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -481,6 +480,8 @@
         <image name="cocktail-emoji" width="512" height="512"/>
         <image name="dancing-emoji" width="512" height="512"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="music.quarternote.3" catalog="system" width="128" height="103"/>
+        <image name="smiley" catalog="system" width="128" height="121"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
