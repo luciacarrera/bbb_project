@@ -15,11 +15,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var addressField: UITextField!
     @IBOutlet var bestField: UITextField!
     @IBOutlet var descriptionField: UITextView!
-    @IBOutlet var priceField: UISlider!
+//    @IBOutlet var priceField: UISlider!
     @IBOutlet var drinksField: UISlider!
     @IBOutlet var musicField: UISlider!
     @IBOutlet var dancingField: UISlider!
     @IBOutlet var friendlinessField: UISlider!
+    
+    @IBOutlet var starButtons: [UIButton]!
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -60,6 +62,17 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         
            
     }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        for button in starButtons {
+            if button.tag <= sender.tag {
+                button.setBackgroundImage(UIImage.init(systemName: "star.fill"), for: .normal)
+            } else {
+                button.setBackgroundImage(UIImage.init(systemName: "star"), for: .normal)
+            }
+        }
+    }
+    
     var item: Item! {
         didSet {
             navigationItem.title = item.name
@@ -78,7 +91,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         addressField.text = item.address
         descriptionField.text = item.description
         bestField.text = item.bestFor
-        priceField.value = Float(item.priceR)
+//        priceField.value = Float(item.priceR)
         drinksField.value = Float(item.drinksR)
         musicField.value = Float(item.musicR)
         dancingField.value = Float(item.dancingR)
@@ -95,7 +108,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         item.address = addressField.text ?? ""
         item.description = descriptionField.text ?? ""
         item.bestFor = bestField.text ?? ""
-        item.priceR = priceField.value
+//        item.priceR = priceField.value
         item.drinksR = drinksField.value
         item.dancingR = dancingField.value
         item.friendlyR = friendlinessField.value
@@ -112,5 +125,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         descriptionField.layer.borderColor = borderColor.cgColor
         descriptionField.layer.cornerRadius = 5.0
     }
+    
+    
     
 }
