@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController, UITextFieldDelegate{
     
     
-    @IBOutlet var nameField: UILabel!
+    @IBOutlet var nameField: UITextField!
     @IBOutlet var addressField: UITextField!
     @IBOutlet var descriptionField: UITextView!
     @IBOutlet var bestField: UITextField!
