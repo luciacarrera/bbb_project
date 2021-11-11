@@ -51,7 +51,7 @@ class ItemsViewController: UITableViewController {
         
         item.totalR = (item.priceR + item.drinksR + item.musicR + item.dancingR + item.friendlyR ) / 5.0
         item.totalR = round(item.totalR * 10) / 10.0
-        cell.ratingLabel.text = "\(item.totalR)"
+        cell.ratingLabel.text = "\(item. otalR)"
         
         return cell
     }
