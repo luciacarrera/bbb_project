@@ -48,8 +48,6 @@ class ItemsViewController: UITableViewController {
         // this cell will apeear in on the table view
         let item = itemStore.allItems[indexPath.row]
         
-        
-        
         cell.nameLabel.text = item.name
         cell.typeLabel.text = item.type
         

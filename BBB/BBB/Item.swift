@@ -49,6 +49,7 @@ class Item: Equatable, Codable {
         
         // get average of ratings
         self.totalR = (priceR + drinksR + musicR + dancingR + friendlyR ) / 5.0
+        self.totalR = round(totalR*10)
 
     }
     
