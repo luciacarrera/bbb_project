@@ -10,21 +10,26 @@ import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate{
     
-
+    var itemStore: ItemStore!
     
     @IBOutlet var nameField: UITextField!
     @IBOutlet var addressField: UITextField!
     @IBOutlet var bestField: UITextField!
-
-    @IBOutlet var drinksField: UISlider!
-    @IBOutlet var musicField: UISlider!
-    @IBOutlet var dancingField: UISlider!
-    @IBOutlet var friendlinessField: UISlider!
     
     @IBOutlet var priceRating: UILabel!
     @IBOutlet var priceStarButtons: [UIButton]!
     
-    var itemStore: ItemStore!
+    @IBOutlet var drinksRating: UILabel!
+    @IBOutlet var drinksStarButtons: [UIButton]!
+    
+    @IBOutlet var musicRating: UILabel!
+    @IBOutlet var musicStarButtons: [UIButton]!
+    
+    @IBOutlet var dancingRating: UILabel!
+    @IBOutlet var dancingStarButtons: [UIButton]!
+    
+    @IBOutlet var friendlinessRating: UILabel!
+    @IBOutlet var friendlinessStarButtons: [UIButton]!
     
     @IBAction func priceStarTapped(_ sender: UIButton) {
         let tag = sender.tag
@@ -37,8 +42,63 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
                 button.setTitle("☆", for: .normal)
             }
         }
-        
         priceRating.text = String(tag)
+    }
+    
+    @IBAction func drinksStarTapped(_ sender: UIButton) {
+        let tag = sender.tag
+        for button in drinksStarButtons {
+            if button.tag <= tag {
+                // select button
+                button.setTitle("★", for: .normal)
+            } else {
+                // not selected button
+                button.setTitle("☆", for: .normal)
+            }
+        }
+        drinksRating.text = String(tag)
+    }
+    
+    @IBAction func musicStarTapped(_ sender: UIButton) {
+        let tag = sender.tag
+        for button in musicStarButtons {
+            if button.tag <= tag {
+                // select button
+                button.setTitle("★", for: .normal)
+            } else {
+                // not selected button
+                button.setTitle("☆", for: .normal)
+            }
+        }
+        musicRating.text = String(tag)
+    }
+    
+    @IBAction func dancingStarTapped(_ sender: UIButton) {
+        let tag = sender.tag
+        for button in dancingStarButtons {
+            if button.tag <= tag {
+                // select button
+                button.setTitle("★", for: .normal)
+            } else {
+                // not selected button
+                button.setTitle("☆", for: .normal)
+            }
+        }
+        dancingRating.text = String(tag)
+    }
+    
+    @IBAction func friendlinessButtonTapped(_ sender: UIButton) {
+        let tag = sender.tag
+        for button in friendlinessStarButtons {
+            if button.tag <= tag {
+                // select button
+                button.setTitle("★", for: .normal)
+            } else {
+                // not selected button
+                button.setTitle("☆", for: .normal)
+            }
+        }
+        friendlinessRating.text = String(tag)
     }
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
@@ -87,28 +147,38 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
             navigationItem.title = item.name
         }
     }
-    
-    // Use address/slider formatters?
-    // put categories in best for?
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         nameField.text = item.name
         addressField.text = item.address
         bestField.text = item.bestFor
-        priceRating.text = String(item.priceR)
         
+        priceRating.text = String(item.priceR)
         for i in 0..<Int(item.priceR) {
             priceStarButtons[i].setTitle("★", for: .normal)
         }
         
-//        priceField.value = Float(item.priceR)
-        drinksField.value = Float(item.drinksR)
-        musicField.value = Float(item.musicR)
-        dancingField.value = Float(item.dancingR)
-        friendlinessField.value = Float(item.friendlyR)
+        drinksRating.text = String(item.drinksR)
+        for i in 0..<Int(item.drinksR) {
+            drinksStarButtons[i].setTitle("★", for: .normal)
+        }
         
+        musicRating.text = String(item.musicR)
+        for i in 0..<Int(item.musicR) {
+            musicStarButtons[i].setTitle("★", for: .normal)
+        }
+        
+        dancingRating.text = String(item.dancingR)
+        for i in 0..<Int(item.dancingR) {
+            dancingStarButtons[i].setTitle("★", for: .normal)
+        }
+        
+        friendlinessRating.text = String(item.friendlyR)
+        for i in 0..<Int(item.friendlyR) {
+            friendlinessStarButtons[i].setTitle("★", for: .normal)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool){
@@ -119,9 +189,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         item.address = addressField.text ?? ""
         item.bestFor = bestField.text ?? ""
         item.priceR = Double(priceRating.text ?? "") ?? 0.0
-//        item.drinksR = Int(drinksField.value)
-//        item.dancingR = Int(dancingField.value)
-//        item.friendlyR = Int(friendlinessField.value)
+        item.drinksR = Double(drinksRating.text ?? "") ?? 0.0
+        item.musicR = Double(musicRating.text ?? "") ?? 0.0
+        item.dancingR = Double(dancingRating.text ?? "") ?? 0.0
+        item.friendlyR = Double(friendlinessRating.text ?? "") ?? 0.0
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
