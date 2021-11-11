@@ -48,8 +48,8 @@ class Item: Equatable, Codable {
         self.friendlyR = friendlyR
         
         // get average of ratings
-        self.totalR = (priceR + drinksR + musicR + dancingR + friendlyR ) / 5.0
-        self.totalR = round(totalR*10)
+        let total = (priceR + drinksR + musicR + dancingR + friendlyR ) / 5.0
+        self.totalR = round(total * 10) / 10.0
 
     }
     
@@ -75,9 +75,6 @@ class Item: Equatable, Codable {
             
             // description
             let des = "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
-            
-            // photo
-            //let photo = UIImage.init()
             
             self.init(name: randomName,
                       type: establishmentType,

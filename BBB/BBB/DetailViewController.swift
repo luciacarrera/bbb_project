@@ -155,27 +155,22 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
         addressField.text = item.address
         bestField.text = item.bestFor
         
-        priceRating.text = String(item.priceR)
         for i in 0..<Int(item.priceR) {
             priceStarButtons[i].setTitle("★", for: .normal)
         }
         
-        drinksRating.text = String(item.drinksR)
         for i in 0..<Int(item.drinksR) {
             drinksStarButtons[i].setTitle("★", for: .normal)
         }
         
-        musicRating.text = String(item.musicR)
         for i in 0..<Int(item.musicR) {
             musicStarButtons[i].setTitle("★", for: .normal)
         }
         
-        dancingRating.text = String(item.dancingR)
         for i in 0..<Int(item.dancingR) {
             dancingStarButtons[i].setTitle("★", for: .normal)
         }
         
-        friendlinessRating.text = String(item.friendlyR)
         for i in 0..<Int(item.friendlyR) {
             friendlinessStarButtons[i].setTitle("★", for: .normal)
         }
