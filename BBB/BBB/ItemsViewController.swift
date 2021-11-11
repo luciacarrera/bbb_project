@@ -33,8 +33,6 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.allItems.count
     }
@@ -52,6 +50,7 @@ class ItemsViewController: UITableViewController {
         cell.typeLabel.text = item.type
         
         item.totalR = (item.priceR + item.drinksR + item.musicR + item.dancingR + item.friendlyR ) / 5.0
+        item.totalR = round(item.totalR * 10) / 10.0
         cell.ratingLabel.text = "\(item.totalR)"
         
         return cell
