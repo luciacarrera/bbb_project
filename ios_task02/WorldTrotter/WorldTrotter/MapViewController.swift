@@ -91,7 +91,24 @@ class MapViewController: UIViewController {
         switchLeadingConstraint.isActive = true
         
         // Locations button
+        let findMe = UIButton()
+        findMe.setTitle("Find Me", for: .normal)
+        findMe.setTitleColor(.black, for: .normal)
+        findMe.backgroundColor = .white
+        findMe.layer.borderWidth = 1
+        findMe.layer.cornerRadius = 2
         
+        findMe.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(findMe)
+    
+        let fmButtonWidthConstraints = findMe.widthAnchor.constraint(equalTo: findMe.titleLabel!.widthAnchor, constant: 10.0)
+        
+        let findMeTopConstraint = findMe.topAnchor.constraint(equalTo: pointsOfInterest.bottomAnchor, constant: 8)
+        let findMeLeadingConstraint = findMe.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
+        
+        fmButtonWidthConstraints.isActive = true
+        findMeTopConstraint.isActive = true
+        findMeLeadingConstraint.isActive = true
         
     }
     
