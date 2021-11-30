@@ -36,7 +36,19 @@ class MapViewController: UIViewController {
     
     // function to make button zoom in when tapped
     @objc func zoomIn(_ sender: UIButton!) {
-           print("btn tapped")
+        
+        let coord = CLLocationCoordinate2D(latitude: 40.4168, longitude: -3.7038)
+        let region = MKCoordinateRegion(center: coord, latitudinalMeters: 5000, longitudinalMeters: 5000)
+        mapView.setRegion(region, animated: true)
+        /*use cllocation manager
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        // Check for location services*/
+        
        }
     
     override func loadView() {
