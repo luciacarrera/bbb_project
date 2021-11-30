@@ -34,6 +34,11 @@ class MapViewController: UIViewController {
         }
     }
     
+    // function to make button zoom in when tapped
+    @objc func zoomIn(_ sender: UIButton!) {
+           print("btn tapped")
+       }
+    
     override func loadView() {
         // Create a map view
         mapView = MKMapView()
@@ -64,7 +69,7 @@ class MapViewController: UIViewController {
         // Points of intrest label
         let pointsOfInterest = UILabel()
         pointsOfInterest.text = "Points of Interest"
-        pointsOfInterest.textColor = UIColor.black
+        pointsOfInterest.textColor = UIColor.red
         
         pointsOfInterest.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pointsOfInterest)
@@ -101,7 +106,7 @@ class MapViewController: UIViewController {
         findMe.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(findMe)
     
-        let fmButtonWidthConstraints = findMe.widthAnchor.constraint(equalTo: findMe.titleLabel!.widthAnchor, constant: 10.0)
+        let fmButtonWidthConstraints = findMe.widthAnchor.constraint(equalToConstant: findMe.titleLabel!.intrinsicContentSize.width + 2.0 * 3)
         
         let findMeTopConstraint = findMe.topAnchor.constraint(equalTo: pointsOfInterest.bottomAnchor, constant: 8)
         let findMeLeadingConstraint = findMe.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
@@ -109,6 +114,9 @@ class MapViewController: UIViewController {
         fmButtonWidthConstraints.isActive = true
         findMeTopConstraint.isActive = true
         findMeLeadingConstraint.isActive = true
+        
+        // to make button action function work when button tapped
+        findMe.addTarget(self, action: #selector(zoomIn), for: .touchUpInside)
         
     }
     
